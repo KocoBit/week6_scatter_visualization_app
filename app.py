@@ -20,7 +20,8 @@ def set_korean_font():
     elif system_name == "Darwin":
         plt.rc("font", family="AppleGothic")
     else:
-        plt.rc("font", family="NanumGothic")
+        # Streamlit Cloud(리눅스)에서는 packages.txt로 설치한 폰트를 사용한다.
+        plt.rc("font", family="Nanum Gothic")
 
     # 음수 기호(-)가 네모나 이상한 문자로 깨지는 현상을 막는다.
     plt.rcParams["axes.unicode_minus"] = False
